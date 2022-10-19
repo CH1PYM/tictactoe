@@ -37,8 +37,8 @@ const gameBoard = (function() {
     const _checkTie = () => {
         let counterTie = 0
         gameBoardArr.forEach(element => {
-            element === "" ? null : counterTie++;
-            counterTie === 9 ? displayActions.displayWin("Tie") : null;
+            element == "" ? null : counterTie++;
+            counterTie == 9 ? displayActions.displayWin("Tie") : null;
         })
     }
     const _renderCoordinates = (coordinates, sign) => {
