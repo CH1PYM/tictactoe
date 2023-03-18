@@ -8,7 +8,7 @@ const gameBoard = (function() {
     ];
 
     const _setCoordinates = (indexGameBoard, player) => {
-        gameBoardArr[indexGameBoard] === "" ? gameBoardArr[indexGameBoard] = player : null;
+        gameBoardArr[indexGameBoard] == "" ? gameBoardArr[indexGameBoard] = player : null;
         _renderCoordinates(indexGameBoard, player);
     }
 
@@ -26,10 +26,10 @@ const gameBoard = (function() {
             let counterX = 0;
             let counterO = 0;
             element.forEach(element => {
-                gameBoardArr[element] === "x" ? counterX++ : null ;
+                gameBoardArr[element] == "x" ? counterX++ : null ;
                 counterX === 3 ?  displayActions.displayWin("Winner X") : null ;
 
-                gameBoardArr[element] === "o" ? counterO++ : null ;
+                gameBoardArr[element] == "o" ? counterO++ : null ;
                 counterO === 3 ? displayActions.displayWin("Winner O") : null ;
             })
         });
@@ -64,7 +64,7 @@ const gameBoard = (function() {
         }
     }
     const _changePlayer = (input) => {
-      input === "x" ? sign = "o" : sign ="x";
+      input == "x" ? sign = "o" : sign ="x";
     }
     return {
          logCoordinates,
